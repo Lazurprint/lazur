@@ -101,6 +101,19 @@
         width: 100%;
     }
 
+    .choices__inner {
+        margin-bottom: 10px;
+    }
+
+    .gallery--active {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .gallery-button {
+        justify-content: center;
+    }
+
     .choices__list--dropdown {
         background-color: #fff;
     }

@@ -155,8 +155,8 @@ body {
 /* hero */
 
 .hero {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     color: var(--color-white);
     background-image: url(../img/fon-4\ \(2\).jpg);
     background-repeat: no-repeat;
@@ -642,7 +642,7 @@ body {
 /* delivery */
 
 .delivery__container {
-    padding: 88px 35px 68px;
+    padding: 38px 35px 38px;
 }
 
 .delivery__title {
@@ -659,4 +659,28 @@ body {
     line-height: 32px;
     color: var(--color-night-rider);
     margin-bottom: 10px;
+}
+
+/* Контакты */
+
+.contacts {
+    background-image: url(../img/slider-bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+
+.contacts__top {
+    min-height: 500px;
+}
+
+.contacts__title {
+    color: var(--color-white);
+}
+
+.contacts__bottom {
+    height: 700px;
+}
+
+[class*="ground-pane"] {
+    filter: grayscale(1);
 }
