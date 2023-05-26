@@ -1,29 +1,870 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="libs/choices.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <script defer src="libs/choices.min.js"></script>
+    <script defer src="libs/swiper-bundle.min.js"></script>
+    <script defer src="main.js"></script>
     <title>Lazurprint</title>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
             <div class="header__container">
-                <a class="logo"><img class="logo__img" src="img/logo/logo_Lazur_01.png" alt="Логотип"></a>
+
+                <a class="logo"><img class="logo__img" src="img/logo/logo_Lazur.svg" alt="Логотип"></a>
+                <button class="burger btn-reset" tabindex="0">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+
                 <ul class="header__menu list-reset">
-                    <li class="header__item">Главная</li>
-                    <li class="header__item">Доставка</li>
-                    <li class="header__item">Каталог</li>
-                    <li class="header__item">Контакты</li>
-                    <li class="header__item">О компании</li>
+                    <li class="header__item"><a href="#hero" class="header__link">Главная</a></li>
+                    <li class="header__item"><a href="#about" class="header__link">О компании</a></li>
+                    <li class="header__item"><a href="#gallery" class="header__link">Каталог</a></li>
+                    <li class="header__item"><a href="#delivery" class="header__link">Доставка</a></li>
+                    <li class="header__item"><a href="#hero" class="header__link">Контакты</a></li>
                 </ul>
             </div>
-            
         </div>
     </header>
-    
+    <main class="main">
+        <section class="hero  hero-swiper-container" id="hero">
+            <!-- <div class="hero-swiper-wrapper swiper-wrapper">
+                <div class="swiper-slide hero-swiper-slade hero-swiper-slide-1"></div>
+                <div class="swiper-slide hero-swiper-slade hero-swiper-slide-2"></div>
+                <div class="swiper-slide hero-swiper-slade hero-swiper-slide-3"></div>
+            </div> -->
+            <div class="hero__container container">
+                <h2 class="hero__title">
+                    Печатаем все для Вашего бизнеса
+                </h2>
+                <!-- <p class="hero__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
+                    создаёт предпосылки для новых предложений.</p> -->
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about__container container">
+                <h2 class="about__title">О компании</h2>
+                <p class="about__text">
+                    Типография "Лазурь" основана в мае 1997 года. Мы можем изготовить любую полиграфическую продукцию,
+                    но основная специализация типографии - полноцветные периодические издания (журнал, газета, каталог,
+                    книга). <br>
+                    За короткий период времени "Лазурь" достигла очень высокого уровня развития, завоевала широкую
+                    популярность среди заказчиков. В нашей типографии печатаются многие полноцветные издания
+                    Свердловской, Тюменской, Челябинской, Пермской и других областей. Полный полиграфический цикл,
+                    высочайшее качество печати, современнейшее оборудование, высокий профессионализм кадров, короткие
+                    сроки исполнения заказа - вот залог успеха типографии "Лазурь".
+                </p>
+                <div class="about__content">
+                    <h3 class="about__subtitle">Потому что полиграфию выгодно заказывать у нас</h3>
+                    <ul class="about__list">
+                        <li class="about__item">25 лет успешной работы;</li>
+                        <li class="about__item">Полный полиграфический цикл;</li>
+                        <li class="about__item">Работа без посредников;</li>
+                        <li class="about__item">Невысокие цены;</li>
+                        <li class="about__item">Персональный сервис;</li>
+                        <li class="about__item">Стабильное качество;</li>
+                        <li class="about__item">Надежность исполнения заказа в срок;</li>
+                        <li class="about__item">Высококвалифицированные специалисты всех полиграфических специальностей.
+                        </li>
+                    </ul>
+                    <p class="about__desc">
+                        Для удобства работы с клиентами типография работает круглосуточно, без выходных. Осуществляется
+                        ежедневная доставка заказов. Открыто представительство в г. Екатеринбург. Техническое оснащение
+                        типографии и профессионализм сотрудников непрерывно растет. Типография "Лазурь" - одно из самых
+                        развитых полиграфических предприятий. Мы работаем на самых совершенных машинах. Благодаря своим
+                        качествам (скорости и автоматизации), они позволяют занимать лидирующее место на рынке. Сейчас
+                        нас признают российские и зарубежные полиграфисты и издатели, как одну из самых крупных
+                        типографий. Наши сотрудники постоянно повышают свою квалификацию в учебных заведениях, посещают
+                        в порядке обмена опытом типографии России, зарубежных коллег. <br> <br>
+                        С 2002 года типография принимает участие в областном конкурсе "Лидер в бизнесе" и удостоена
+                        звания "Лучшее предприятие сферы услуг" в 2002 году. В 2003 году стало победителем конкурсов
+                        "Лидер в бизнесе 2003" и "Евразия Лидер в бизнесе 2003", в 2004 году - "Лидер в бизнесе 2004".В
+                        2005 году типография "Лазурь" вновь завоевала почетное звание "Лидер в бизнесе" в номинации
+                        "Лучшее предприятие сферы услуг".
+
+                        В 2006 году «Лазурь» победила в конкурсе на соискание «Европейский Гран-При за качество». Эта
+                        почетная награда учреждена по инициативе швейцарского Агентства содействия промышленности и
+                        новым технологиям (OPI), а также некоммерческим инвестиционным фондом «EMA Invest». Вручение
+                        «Европейского Гран-При» состоялось в Женеве. В торжестве принимали участие государственный
+                        министр экономикикантона Женева Карло Лампрехт, директор OPI Жан-Николя Тальман, президент фонда
+                        EMA invest, член парламента Ги Метан. <br><br>
+
+                        В 2006 году типографию, как самое преуспевающее предприятие Уральского региона среди предприятий
+                        полиграфической отрасли, посетили депутаты Государственной Думы. Вместе с ними были сотрудники
+                        аппарата Комитета Думы, депутаты областной Думы. Гости высоко оценили качество продукции
+                        «Лазури», ее стремление развивать новые проекты, освоение высокотехнологичного оборудования.
+                        Татьяна Александровна передала открытое письмо полиграфистов Урала и Сибири с предложениями по
+                        развитию отрасли. <br><br>
+
+                        В феврале 2007 года участники Форума полиграфистов Сибири и Урала. Тогда этот Форум проходил в
+                        Екатеринбурге, и большинство участников попросило организовать экскурсию в «Лазурь». Такое
+                        внимание особенно приятно, если учесть, что участниками стали коллеги, директоры и топ-менеджеры
+                        полиграфических предприятий. Гости осмотрели все цеха «Лазури», разговаривали с работниками. Они
+                        интересовались участком СТP, много времени провели на WEB-8, детально осмотрели все машины
+                        листового участка. Гости были из Омска, Красноярска, Барнаула, Новосибирска. Многие из них уже
+                        были знакомы с Татьяной Александровной, но побывали в типографии впервые.
+                    </p>
+                </div>
+                <a href="#about" class="about__trigger btn-reset">Почему мы?</a>
+            </div>
+        </section>
+        <section class="gallery" id="gallery">
+
+            <div class="gallery__container container">
+                <div class="gallery__left flex">
+                    <h2 class="gallery__title" id="gal">Каталог</h2>
+                    <span class="gallery__filter">Фильтр</span>
+                    <select name="selectGallery" id="selectGallery" class="gallery__select">
+                        <option class="select__option" value="Книги и журналы">Книги и журналы</option>
+                        <option class="select__option" value="Учебники и игры">Учебники и игры</option>
+                        <option class="select__option" value="Газеты и плакаты">Газеты и плакаты</option>
+                        <option class="select__option" value="Упаковка и этикетки">Упаковка и этикетки</option>
+                        <option class="select__option" value="Сувенирная продукция">Сувенирная продукция</option>
+                        <option class="select__option" value="Листовки брошюры и флаеры">Листовки брошюры и флаеры</option>
+                        
+                        <option class="select__option" value="Бумажные пакеты и календари">Бумажные пакеты и календари</option>
+                        
+
+                    </select>
+
+                </div>
+                <div class="gallery__right">
+                    <div class="gallery-swiper-container swiper-container gallery-swp swp1 gallery--active">
+
+                        <div class="gallery-button">
+                            <div class="gallery-button__prev swiper-button-prev swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 0.999999C7.26801 0.999999 1 7.26801 1 15C1 22.732 7.26801 29 15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999998 15 0.999999Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M16 10L11 15L16 20" stroke="white" />
+                                </svg>
+                            </div>
+                            <div class="swiper-pagination gallery-button__pagination"></div>
+                            <div class="gallery-button__next swiper-button-next swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999999 15 0.999999C7.26801 1 1 7.26801 1 15C1 22.732 7.26801 29 15 29Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M14 20L19 15L14 10" stroke="white" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery__swiper-wrapper swiper-wrapper">
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/book/book-14.jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/book/book-11.jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/book/book-12.jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_4" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/Journal/journal-1.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_5" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/Journal/journal-2.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_6" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/Journal/journal-3.jpg"
+                                    alt="Photo">
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="gallery-swiper-container swiper-container gallery-swp swp2">
+
+                        <div class="gallery-button">
+                            <div class="gallery-button__prev swiper-button-prev swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 0.999999C7.26801 0.999999 1 7.26801 1 15C1 22.732 7.26801 29 15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999998 15 0.999999Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M16 10L11 15L16 20" stroke="white" />
+                                </svg>
+                            </div>
+                            <div class="swiper-pagination gallery-button__pagination"></div>
+                            <div class="gallery-button__next swiper-button-next swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999999 15 0.999999C7.26801 1 1 7.26801 1 15C1 22.732 7.26801 29 15 29Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M14 20L19 15L14 10" stroke="white" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery__swiper-wrapper swiper-wrapper">
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/textbook/textbook-1.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/textbook/textbook-2.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/textbook/textbook-3.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/textbook/textbook-4.png"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/textbook/textbook-5.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/textbook/textbook-6.webp"
+                                    alt="Photo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-swiper-container swiper-container gallery-swp swp3">
+
+                        <div class="gallery-button">
+                            <div class="gallery-button__prev swiper-button-prev swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 0.999999C7.26801 0.999999 1 7.26801 1 15C1 22.732 7.26801 29 15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999998 15 0.999999Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M16 10L11 15L16 20" stroke="white" />
+                                </svg>
+                            </div>
+                            <div class="swiper-pagination gallery-button__pagination"></div>
+                            <div class="gallery-button__next swiper-button-next swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999999 15 0.999999C7.26801 1 1 7.26801 1 15C1 22.732 7.26801 29 15 29Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M14 20L19 15L14 10" stroke="white" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery__swiper-wrapper swiper-wrapper">
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/Newspaper/newspaper-1.png"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/Newspaper/newspaper-2.png"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/Newspaper/newspaper-3.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/Newspaper/plakat.jpg"
+                                    alt="Photo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-swiper-container swiper-container gallery-swp swp4">
+
+                        <div class="gallery-button">
+                            <div class="gallery-button__prev swiper-button-prev swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 0.999999C7.26801 0.999999 1 7.26801 1 15C1 22.732 7.26801 29 15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999998 15 0.999999Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M16 10L11 15L16 20" stroke="white" />
+                                </svg>
+                            </div>
+                            <div class="swiper-pagination gallery-button__pagination"></div>
+                            <div class="gallery-button__next swiper-button-next swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999999 15 0.999999C7.26801 1 1 7.26801 1 15C1 22.732 7.26801 29 15 29Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M14 20L19 15L14 10" stroke="white" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery__swiper-wrapper swiper-wrapper">
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/box/box (1).jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/box/box (10).jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/box/box (2).jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/box/box (3).jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/box/box (4).jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/box/box (5).jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/box/fleksa-1.jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/box/fleksa-2.jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/box/fleksa-3.jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/box/obechaika-1 (1).webp"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/box/obechaika-2.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/box/obechaika-3.jpg"
+                                    alt="Photo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-swiper-container swiper-container gallery-swp swp5">
+
+                        <div class="gallery-button">
+                            <div class="gallery-button__prev swiper-button-prev swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 0.999999C7.26801 0.999999 1 7.26801 1 15C1 22.732 7.26801 29 15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999998 15 0.999999Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M16 10L11 15L16 20" stroke="white" />
+                                </svg>
+                            </div>
+                            <div class="swiper-pagination gallery-button__pagination"></div>
+                            <div class="gallery-button__next swiper-button-next swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999999 15 0.999999C7.26801 1 1 7.26801 1 15C1 22.732 7.26801 29 15 29Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M14 20L19 15L14 10" stroke="white" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery__swiper-wrapper swiper-wrapper">
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(1).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(2).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(3).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(4).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(5).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(6).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(7).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(8).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(9).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(10).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(11).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(12).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(13).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(14).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(15).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(16).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(17).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(18).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(19).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(20).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(21).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(22).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(23).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(24).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(25).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(26).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(27).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(28).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(29).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(30).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(31).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(32).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(33).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(34).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(35).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(36).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(37).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(38).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(39).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(40).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(41).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(42).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(43).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(44).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(45).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(46).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(47).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(48).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(49).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(50).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(51).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(52).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(53).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(54).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(55).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(56).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(57).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(58).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(59).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(60).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(61).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(62).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(63).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(64).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(65).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(66).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(67).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(68).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(69).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(70).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(71).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(72).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(73).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(74).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(75).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(76).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(77).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(78).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(79).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(80).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(81).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(82).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(83).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(84).jpeg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/suvenurka/suvenirka-(85).jpeg"
+                                    alt="Photo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-swiper-container swiper-container gallery-swp swp6">
+
+                        <div class="gallery-button">
+                            <div class="gallery-button__prev swiper-button-prev swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 0.999999C7.26801 0.999999 1 7.26801 1 15C1 22.732 7.26801 29 15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999998 15 0.999999Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M16 10L11 15L16 20" stroke="white" />
+                                </svg>
+                            </div>
+                            <div class="swiper-pagination gallery-button__pagination"></div>
+                            <div class="gallery-button__next swiper-button-next swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999999 15 0.999999C7.26801 1 1 7.26801 1 15C1 22.732 7.26801 29 15 29Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M14 20L19 15L14 10" stroke="white" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery__swiper-wrapper swiper-wrapper">
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/leaflets/brochures-1.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/leaflets/brochures.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/leaflets/buklet.webp"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img"
+                                    src="img/gallery/leaflets/katalog-na-pruzhine-1.jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/leaflets/leaflet.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/leaflets/listovka-2.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/leaflets/listovka-3.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/leaflets/listovka1.png"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/leaflets/listovka_09.jpg"
+                                    alt="Photo">
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="gallery-swiper-container swiper-container gallery-swp swp7">
+
+                        <div class="gallery-button">
+                            <div class="gallery-button__prev swiper-button-prev swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 0.999999C7.26801 0.999999 1 7.26801 1 15C1 22.732 7.26801 29 15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999998 15 0.999999Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M16 10L11 15L16 20" stroke="white" />
+                                </svg>
+                            </div>
+                            <div class="swiper-pagination gallery-button__pagination"></div>
+                            <div class="gallery-button__next swiper-button-next swiper-button-gray">
+                                <svg class="swiper-button-gray__svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="swiper-button-gray__background"
+                                        d="M15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999999 15 0.999999C7.26801 1 1 7.26801 1 15C1 22.732 7.26801 29 15 29Z"
+                                        fill="#666666" stroke="#666666" stroke-width="2" />
+                                    <path class="swiper-button-gray__triangle" d="M14 20L19 15L14 10" stroke="white" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="gallery__swiper-wrapper swiper-wrapper">
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img"
+                                    src="img/gallery/Сalendar/159744267-kalendar-.jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/Сalendar/domik-original.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_3" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/Сalendar/kalendar.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img"
+                                    src="img/gallery/Сalendar/kalendar_trio_layt3.jpg" alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_1" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/Сalendar/paket-1.jpg"
+                                    alt="Photo">
+                            </a>
+                            <a class="gallery-swiper-slide swiper-slide swiper-slide_2" data-path="img1">
+                                <img class="gallery-swiper-slide__img" src="img/gallery/Сalendar/paket-2.png"
+                                    alt="Photo">
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+        <section class="delivery" id="delivery">
+            <div class="delivery__container container">
+                <h2 class="delivery__title">Доставка</h2>
+                <ul class="delivery__list">
+                    <li class="delivery__item">Грузоперевозки позволяют функционировать многим экономическим сферам. Для нас принципиально важно доставить товар вовремя и в надлежащем качестве.</li>
+                    <li class="delivery__item">География перевозок по всей России</li>
+                    <li class="delivery__item">Подход к каждому заказчику индивидуально</li>
+                    <li class="delivery__item">Доставим от 1 киллограма до 20 тонн</li>
+                    <li class="delivery__item">Собственный парк автомобилей</li>
+                    <li class="delivery__item">Постоянным клиентам скидки</li>
+                    
+                </ul>
+                
+            </div>
+        </section>
+    </main>
+    <div class="modal">
+        <div class="modal__item">
+            <svg class="close" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16
+                        0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667
+                        15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"></path>
+            </svg>
+            <div class="modal__item-img"></div>
+            <div class="modal__item-descr"></div>
+        </div>
+    </div>
+
 </body>
+
 </html>
