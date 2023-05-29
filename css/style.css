@@ -158,7 +158,7 @@ body {
     /* width: 100%;
     height: 100%; */
     color: var(--color-white);
-    background-image: url(../img/fon-4\ \(2\).jpg);
+    background-image: url(../img/background/fon-4\ \(2\).jpg);
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: center; */
@@ -228,7 +228,22 @@ body {
 /* about */
 
 .about__container {
+    position: relative;
     padding: 88px 35px 68px 35px;
+    
+}
+
+.about__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/background/about.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    opacity: 0.3;
 }
 
 .about__title {
@@ -239,7 +254,7 @@ body {
 }
 
 .about__text {
-    max-width: 1080px;
+    max-width: 700px;
     font-size: 16px;
     font-weight: 600;
     line-height: 32px;
@@ -585,6 +600,139 @@ body {
     opacity: 1;
 }
 
+.gallery__btn {
+    display: block;
+    max-width: 220px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-white);
+    transform: translateY(-50px);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 10px 0px;
+    border: 2px solid var(--color-white);
+}
+
+/* Доставка */
+
+.delivery__container {
+    position: relative;
+    padding: 90px 35px;
+}
+
+.delivery__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(../img/background/delivery.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.delivery__title {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--color-night-rider);
+    margin-bottom: 20px;
+}
+
+.delivery__descr {
+    max-width: 700px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.delivery__list {
+    padding-left: 20px;
+}
+
+.delivery__item {
+    max-width: 1080px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 32px;
+    color: var(--color-night-rider);
+    margin-bottom: 10px;
+}
+
+/* Контакты */
+
+.contacts__top {
+    background-image: url(../img/background/slider-bg-2.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding: 90px 20px;
+}
+
+.contacts__title {
+    color: var(--color-white);
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contacts__list {
+    color: var(--color-white);
+    max-width: 400px;
+}
+
+.contacts__item {
+    margin-bottom: 20px;
+}
+
+.contacts__link {
+    display: flex;
+    align-items: center;
+}
+
+.contacts__item svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--color-white);
+    margin-right: 10px;
+}
+
+.contacts__bottom {
+    height: 700px;
+}
+
+[class*="ground-pane"] {
+    filter: grayscale(1);
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--color-black);
+}
+
+.footer__container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer__logo-img {
+    max-width: 200px;
+}
+
+.footer__descr {
+    color: var(--color-white);
+    font-family: "Ofont";
+    font-size: 30px;
+    margin: 0 auto;
+}
+
 /* модальное окно */
 .modal {
     position: relative;
@@ -637,50 +785,4 @@ body {
     visibility: visible;
     opacity: 1;
     z-index: 0;
-}
-
-/* delivery */
-
-.delivery__container {
-    padding: 38px 35px 38px;
-}
-
-.delivery__title {
-    font-size: 48px;
-    font-weight: 600;
-    color: var(--color-night-rider);
-    margin-bottom: 20px;
-}
-
-.delivery__item {
-    max-width: 1080px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 32px;
-    color: var(--color-night-rider);
-    margin-bottom: 10px;
-}
-
-/* Контакты */
-
-.contacts {
-    background-image: url(../img/slider-bg-2.jpg);
-    background-repeat: no-repeat;
-    background-size: contain; 
-}
-
-.contacts__top {
-    min-height: 500px;
-}
-
-.contacts__title {
-    color: var(--color-white);
-}
-
-.contacts__bottom {
-    height: 700px;
-}
-
-[class*="ground-pane"] {
-    filter: grayscale(1);
 }

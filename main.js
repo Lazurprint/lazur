@@ -202,7 +202,7 @@ function init() {
     });
     var myPlacemark = new ymaps.Placemark([57.348307, 61.405098], {}, {
         iconLayout: 'default#image',
-        iconImageHref: 'img/marker.svg',
+        iconImageHref: 'img/background/marker.svg',
         iconImageSize: [30, 30],
         iconImageOffset: [0, 0],
     });
