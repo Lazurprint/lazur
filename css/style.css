@@ -274,6 +274,12 @@ body {
     padding-right: 30px;
     border-radius: 25px;
     color: var(--color-blue);
+    transition: background .5s ease-in-out, color .5s ease-in-out, border-color .5s ease-in-out;
+}
+
+.about__trigger:hover {
+    background: var(--color-blue);
+    color: var(--color-white);
 }
 
 .about__trigger::after {
@@ -288,6 +294,11 @@ body {
     border-bottom: 2px solid var(--color-blue);
     pointer-events: none;
     transform: rotate(-45deg) translateY(-50%);
+}
+
+.about__trigger:hover::after {
+    border-color: var(--color-white);
+    transition: border-color .5s ease-in-out;
 }
 
 .about__trigger--active::after {
@@ -612,6 +623,12 @@ body {
     border-radius: 50px;
     padding: 10px 0px;
     border: 2px solid var(--color-white);
+    transition: background .5s ease-in-out, color .5s ease-in-out;
+}
+
+.gallery__btn:hover {
+    background: var(--color-white);
+    color: #000;
 }
 
 /* Доставка */
@@ -668,7 +685,7 @@ body {
 .contacts__top {
     background-image: url(../img/background/slider-bg-2.jpg);
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     padding: 90px 20px;
 }
 
@@ -681,7 +698,6 @@ body {
 
 .contacts__list {
     color: var(--color-white);
-    max-width: 400px;
 }
 
 .contacts__item {
@@ -691,6 +707,10 @@ body {
 .contacts__link {
     display: flex;
     align-items: center;
+}
+
+.contacts__link span {
+    max-width: 450px;
 }
 
 .contacts__item svg {
