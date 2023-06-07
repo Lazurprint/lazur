@@ -162,10 +162,30 @@ function slader() {
 
 slader()
 
+// кнопка каталога 
+
+const galleryBtn = document.querySelector('.gallery__btn');
+const formModal = document.querySelector('.form__modal');
+const formClose = document.querySelector('.form__close');
+
+galleryBtn.addEventListener('click', () => {
+    formModal.classList.add('modal--active')
+})
+
+formClose.addEventListener('click', () => {
+    formModal.classList.remove('modal--active')
+})
+
+formModal.addEventListener('click', (e) => {
+    if (e.target === formModal) {
+        formModal.classList.remove('modal--active')
+    }
+})
+
 // Модальное окно
-const galleryItem = document.querySelectorAll('.gallery-swiper-slide');
 const modal = document.querySelector('.modal');
 const modalItem = document.querySelector('.modal__item');
+const galleryItem = document.querySelectorAll('.gallery-swiper-slide');
 const modalItemImg = document.querySelector('.modal__item-img');
 const modalItemDescr = document.querySelector('.modal__item-descr');
 const close = document.querySelector('.close');
@@ -174,7 +194,6 @@ galleryItem.forEach(item => {
     item.addEventListener('click', () => {
         modal.classList.add('modal--active')
         modalItemImg.innerHTML = item.innerHTML
-        console.log(item);
     })
 })
 
@@ -202,3 +221,62 @@ for (let anchor of anchors) {
         })
     })
 };
+
+// валидация
+
+let selector = document.querySelector('.form__tel');
+let im = new Inputmask('+7 (999) 999-99-99');
+im.mask(selector);
+
+let selector2 = document.querySelector('input[type="tel"]');
+
+selector2.addEventListener('input', function () {
+
+    const re = /^\d*(\.\d+)?$/
+
+
+});
+
+const fileInput = document.querySelector('input[type="file"]');
+
+fileInput.addEventListener('change', (e) => {
+    let files = e.currentTarget.files;
+    console.log(files);
+
+    if (files.length) {
+        fileInput.closest('label').querySelector('span').textContent = files[0].name;
+    } else {
+        fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
+    }
+
+});
+
+let validateForms = function (selector, rules, successModal, yaGoal) {
+    new window.JustValidate(selector, {
+        rules: rules,
+        submitHandler: function (form) {
+            let formData = new FormData(form);
+
+            let xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        alert('Отправлено');
+                        formModal.classList.remove('modal--active')
+                    }
+                }
+            }
+
+            xhr.open('POST', 'mail.php', true);
+            xhr.send(formData);
+
+            form.reset();
+
+            fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
+        }
+    });
+}
+
+validateForms('.form', { email: { required: true, email: true }, tel: { required: true } }, '.thanks-popup', 'send goal');
+

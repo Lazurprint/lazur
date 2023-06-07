@@ -20,6 +20,8 @@
 
     <script defer src="libs/choices.min.js"></script>
     <script defer src="libs/swiper-bundle.min.js"></script>
+    <script defer src="libs/inputmask.min.js"></script>
+    <script defer src="libs/just-validate.min.js"></script>
     <script defer src="main.js"></script>
 </head>
 
@@ -61,6 +63,7 @@
         <section class="about" id="about">
             <div class="about__container container">
                 <h2 class="about__title">О компании</h2>
+
                 <p class="about__text">
                     Типография "Лазурь" основана в мае 1997 года. Мы можем изготовить любую полиграфическую продукцию,
                     но основная специализация типографии - полноцветные периодические издания (журнал, газета, каталог,
@@ -841,7 +844,8 @@
                     </div>
                 </div>
             </div>
-            <a href="#contacts" class="gallery__btn">Хочу заказать</a>
+
+            <a class="gallery__btn btn-reset">Хочу заказать</a>
 
         </section>
         <section class="delivery" id="delivery">
@@ -982,6 +986,37 @@
             <div class="modal__item-img"></div>
             <div class="modal__item-descr"></div>
         </div>
+    </div>
+    <div class="form__modal">
+        <form id="form" action="mail.php" enctype="multipart/form-data" class="form" method="POST">
+            <svg class="form__close" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16
+                        0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667
+                        15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"></path>
+            </svg>
+            <input type="hidden" name="admin_email[]" value="agapov_89@bk.ru">
+            <input type="hidden" name="form_subject" value="Новый заказ">
+            <h2 class="form__title">Отправка формы</h2>
+            <label class="form-label">
+                <span>Введите имя</span>
+                <input placeholder="Ваше имя" type="text" name="name">
+            </label>
+            <label class="form-label">
+                <span>Введите телефон</span>
+                <input class="form__tel" type="tel" data-validate-field="tel" name="tel">
+            </label>
+            <label class="form-label">
+                <span>Введите email</span>
+                <input type="email" data-validate-field="email" name="email">
+            </label>
+            <label class="form-label file-label">
+                <span>Прикрепить файл</span>
+                <input type="file" name="file[]" multiple>
+            </label>
+            <button class="form__btn btn-reset" type="submit">Отправить</button>
+        </form>
     </div>
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
