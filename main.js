@@ -45,7 +45,7 @@ menuLinks.forEach(function (el) {
 const aboutBtn = document.querySelector('.about__trigger');
 const aboutContent = document.querySelector('.about__content');
 
-aboutBtn.addEventListener('click', ()=> {
+aboutBtn.addEventListener('click', () => {
     aboutContent.classList.toggle('about__conten--active')
     aboutBtn.classList.toggle('about__trigger--active')
     if (aboutBtn.textContent !== 'Скрыть') {
@@ -53,7 +53,7 @@ aboutBtn.addEventListener('click', ()=> {
     } else {
         aboutBtn.textContent = 'Почему мы?'
     }
-    
+
 })
 
 // Селект в каталоге
@@ -91,7 +91,7 @@ const selectGallery = () => {
         } else if (item.textContent === 'Листовки брошюры и флаеры') {
             document.querySelector('.swp6').classList.add('gallery--active')
             slader()
-        } else if (item.textContent === 'Бумажные пакеты и календари') {
+        } else if (item.textContent === 'Визитки пакеты и календари') {
             document.querySelector('.swp7').classList.add('gallery--active')
             slader()
         }
@@ -171,46 +171,22 @@ const modalItemDescr = document.querySelector('.modal__item-descr');
 const close = document.querySelector('.close');
 
 galleryItem.forEach(item => {
-    item.addEventListener('click', ()=> {
+    item.addEventListener('click', () => {
         modal.classList.add('modal--active')
         modalItemImg.innerHTML = item.innerHTML
         console.log(item);
     })
 })
 
-close.addEventListener('click', ()=> {
+close.addEventListener('click', () => {
     modal.classList.remove('modal--active')
 })
 
-modal.addEventListener('click',(e)=> {
+modal.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.classList.remove('modal--active')
     }
 })
-
-// Карта 
-
-ymaps.ready(init);
-
-function init() {
-
-    var myMap = new ymaps.Map("map", {
-
-        center: [57.348307, 61.405098],
-        zoom: 15,
-        controls: [],
-    });
-    var myPlacemark = new ymaps.Placemark([57.348307, 61.405098], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/background/marker.svg',
-        iconImageSize: [30, 30],
-        iconImageOffset: [0, 0],
-    });
-
-    myMap.geoObjects.add(myPlacemark);
-
-    myMap.behaviors.disable(['drag', 'rightMouseButtonMagnifier', 'scrollZoom']);
-};
 
 // Плавный скролл 
 

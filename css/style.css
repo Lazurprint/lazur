@@ -80,34 +80,34 @@ body {
 
 @font-face {
     font-family: "OpenSans";
+    font-display: swap;
     src: local("OpenSans-Regular"), url(../fonts/OpenSans-Regular.woff2) format(woff2);
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: "OpenSans";
+    font-display: swap;
     src: local("OpenSans-SemiBold"), url(../fonts/OpenSans-SemiBold.woff2) format(woff2);
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: "OpenSans";
+    font-display: swap;
     src: local("OpenSans-Bold"), url(../fonts/OpenSans-Bold.woff2) format(woff2);
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: "Ofont";
+    font-display: swap;
     src: local("OpenSans-Bold"), url(../fonts/ofont.ru_LeoHand.woff2) format(woff2);
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
 }
 
 .stop-scroll {
@@ -149,7 +149,7 @@ body {
 .header__link:hover {
     /* color: red; */
     border-bottom: 2px solid var(--color-white);
-    transition: border-color 1s ease; 
+    transition: border-color 1s ease;
 }
 
 /* hero */
@@ -230,7 +230,7 @@ body {
 .about__container {
     position: relative;
     padding: 88px 35px 68px 35px;
-    
+
 }
 
 .about__container::before {
@@ -346,6 +346,7 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    padding-bottom: 50px;
 }
 
 .gallery__container {
@@ -617,7 +618,6 @@ body {
     margin: 0 auto;
     text-align: center;
     color: var(--color-white);
-    transform: translateY(-50px);
     font-size: 20px;
     font-weight: 600;
     border-radius: 50px;
